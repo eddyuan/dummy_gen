@@ -16,24 +16,33 @@ know whether this package might be useful for them.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Generate dummy contents;
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+`import 'package:dummy_gen/dummy_gen.dart';`
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Import and use the DummyGen;
 
 ```dart
-const like = 'sample';
+DummyGen.city,
+DummyGen.province,
+DummyGen.provinceCode,
+DummyGen.state,
+DummyGen.stateCode,
+DummyGen.street,
+DummyGen.postal,
+DummyGen.address,
+DummyGen.title,
+DummyGen.subTitle,
+DummyGen.paragraph,
+DummyGen.image,
+DummyGen.phone,
+DummyGen.email,
+DummyGen.name,
+DummyGen.dateFuture,
+DummyGen.datePast,
+DummyGen.lorem(),
 ```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
