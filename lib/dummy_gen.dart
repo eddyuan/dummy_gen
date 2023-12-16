@@ -5,9 +5,12 @@ import 'package:dummy_gen/src/id_count.dart';
 
 /// A Calculator.
 class DummyGen {
-  int get id => IdCount.instance.id;
-
+  static int get id => IdCount.instance.id;
   static String get image => DummyInternal.makeImage();
+  static List<String> get images => List.generate(
+        DummyInternal.randomInRange(1, 8),
+        (index) => DummyInternal.makeImage(),
+      );
   static String get city => DummyInternal.makeCity();
   static String get province => DummyInternal.makeProvince(false);
   static String get provinceCode => DummyInternal.makeProvince(true);
@@ -17,6 +20,11 @@ class DummyGen {
   static String get postal => DummyInternal.makePostal();
   static String get phone => DummyInternal.makePhone();
   static String get email => DummyInternal.makeEmail();
+  static int getInt({min = 0, max = 100000}) {
+    final int _max = max < min ? min : max;
+    return DummyInternal.randomInRange(min, _max);
+  }
+
   static DateTime get dateFuture =>
       DummyInternal.makeDate(past: false, future: true);
   static DateTime get datePast =>
