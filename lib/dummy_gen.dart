@@ -25,6 +25,8 @@ class DummyGen {
     return DummyInternal.randomInRange(min, _max);
   }
 
+  static T fromList<T>(List<T> list) => DummyInternal.fromList(list);
+
   static DateTime get dateFuture =>
       DummyInternal.makeDate(past: false, future: true);
   static DateTime get datePast =>

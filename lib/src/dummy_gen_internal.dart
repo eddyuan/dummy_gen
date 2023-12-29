@@ -81,6 +81,8 @@ class DummyInternal {
     return result.join(" ");
   }
 
+  static T fromList<T>(List<T> list) => list[_random.nextInt(list.length)];
+
   static int randomInRange(int minInclusive, int maxInclusive) {
     return _random.nextInt(maxInclusive - minInclusive + 1) + minInclusive;
   }
