@@ -1,6 +1,6 @@
 name: dummy_gen
 description: 'Generate dummy data for quick front-end development when lack of backend support.'
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/eddyuan/dummy_gen.git
 
 environment:
