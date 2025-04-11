@@ -84,7 +84,8 @@ class DummyInternal {
   static T fromList<T>(List<T> list) => list[_random.nextInt(list.length)];
 
   static int randomInRange(int minInclusive, int maxInclusive) {
-    return _random.nextInt(maxInclusive - minInclusive + 1) + minInclusive;
+    final int max = maxInclusive < minInclusive ? minInclusive : maxInclusive;
+    return _random.nextInt(max - minInclusive + 1) + minInclusive;
   }
 
   static String makePhone() {
@@ -188,7 +189,7 @@ class DummyInternal {
   }
 
   static bool makeBool([double truePossibility = 0.5]) {
-    return _random.nextDouble() > truePossibility;
+    return _random.nextDouble() < truePossibility;
   }
 
   static String makeStreet() {
