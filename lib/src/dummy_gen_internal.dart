@@ -1,11 +1,13 @@
 import 'dart:math';
 
+import 'package:dummy_gen/dummy_gen.dart';
 import 'package:dummy_gen/src/city_list.dart';
 import 'package:dummy_gen/src/province_list.dart';
 
 import 'word_list.dart';
 
 class DummyInternal {
+  const DummyInternal._();
   static final Random _random = Random();
 
   /// Generates random text using latin words. Words are distributed
@@ -32,6 +34,11 @@ class DummyInternal {
 
   static String makeImage({int width = 400, int height = 400}) {
     return "https://picsum.photos/id/${randomInRange(1, 500)}/$width/$height";
+  }
+
+  static DummyVideo makeVideo() {
+    final random = Random();
+    return DummyVideo.allVideos[random.nextInt(DummyVideo.allVideos.length)];
   }
 
   static String makeParagraphs(

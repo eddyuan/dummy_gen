@@ -1,7 +1,9 @@
 library dummy_gen;
 
+import 'package:dummy_gen/dummy_gen.dart';
 import 'package:dummy_gen/src/dummy_gen_internal.dart';
 import 'package:dummy_gen/src/id_count.dart';
+export 'src/model.dummy_video.dart';
 
 /// A Calculator.
 class DummyGen {
@@ -12,6 +14,8 @@ class DummyGen {
 
   /// https://picsum.photos/id/xxxx
   static String get image => DummyInternal.makeImage();
+
+  static DummyVideo get video => DummyInternal.makeVideo();
 
   /// List of images
   static List<String> images({
